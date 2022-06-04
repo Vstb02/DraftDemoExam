@@ -7,4 +7,12 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Commands\" />
+    <Folder Include="HostBuilders\" />
+    <Folder Include="Resources\" />
+  </ItemGroup>
+
 </Project>
