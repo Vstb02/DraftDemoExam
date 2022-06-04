@@ -14,9 +14,18 @@
 
   <ItemGroup>
     <Folder Include="Views\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Commands\" />
-    <Folder Include="HostBuilders\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure\Draft.Persistence\Draft.Persistence.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +35,12 @@
     <Resource Include="Resources\Черновик.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
