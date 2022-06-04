@@ -8,6 +8,7 @@ namespace Draft.Domain.Entites
 {
     public class Storage
     {
-
+        public List<Material> Materials { get; set; }
+        public List<Supplier> Suppliers { get; set; }
     }
 }
