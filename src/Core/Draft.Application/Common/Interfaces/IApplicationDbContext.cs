@@ -13,7 +13,7 @@ namespace Draft.Application.Common.Interfaces
         DbSet<Material> Materials { get; set; }
         DbSet<Supplier> Suppliers { get; set; }
         DbSet<Storage> Storages { get; set; }
-        DbSet<TypeMaterial> TypeMaterials { get; set }
+        DbSet<TypeMaterial> TypeMaterials { get; set; }
         DbSet<TypeSupplier> TypeSupplier { get; set; }
         DbSet<Unit> Units { get; set; }
 

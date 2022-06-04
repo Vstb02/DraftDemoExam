@@ -33,6 +33,7 @@ namespace Draft.Persistence.Contexts
             modelBuilder.ApplyConfiguration(new TypeSupplierConfiguration());
             modelBuilder.ApplyConfiguration(new TypeMaterialConfiguration());
             modelBuilder.ApplyConfiguration(new UnitConfiguration());
+            modelBuilder.ApplyConfiguration(new StorageConfiguration());
 
             base.OnModelCreating(modelBuilder);
         }

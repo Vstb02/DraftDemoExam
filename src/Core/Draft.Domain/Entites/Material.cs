@@ -18,5 +18,7 @@ namespace Draft.Domain.Entites
         public int CountInPack { get; set; }
         public Unit Unit { get; set; }
         public int UnitId { get; set; }
+        public Storage Storage { get; set; }
+        public int StorageId { get; set; }
     }
 }
