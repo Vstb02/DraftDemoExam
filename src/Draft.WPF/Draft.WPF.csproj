@@ -8,11 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Черновик.ico" />
+    <None Remove="Resources\Черновик.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="Commands\" />
     <Folder Include="HostBuilders\" />
-    <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Черновик.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Черновик.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>
