@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Draft.Domain.Entites
 {
-    public class Storage
+    public class Storage : BaseEntity
     {
         public int Id { get; set; }
         public List<Material> Materials { get; set; }

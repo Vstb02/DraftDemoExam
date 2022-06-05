@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Draft.Domain.Entites
 {
-    public class TypeMaterial
+    public class TypeMaterial : BaseEntity
     {
-        public int Id { get; set; }
         public string Name { get; set; }
         public List<Material> Materials { get; set; }
     }
