@@ -33,7 +33,8 @@ namespace Draft.WPF
                 .AddDbContext()
                 .AddServices()
                 .AddViewModels()
-                .AddViews();
+                .AddViews()
+                .AddStores();
         }
 
         protected override void OnStartup(StartupEventArgs e)
