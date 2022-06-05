@@ -17,16 +17,15 @@
 
         <SolidColorBrush x:Key="BrushPrimary1" Color="{StaticResource ColorPrimary1}"/>
         <SolidColorBrush x:Key="BrushPrimary2" Color="{StaticResource ColorPrimary2}"/>
-    
+
         <Style x:Key="NavButton" TargetType="RadioButton">
-            <Setter Property="Foreground" Value="White"/>
             <Setter Property="Padding" Value="10 5"/>
             <Setter Property="FontSize" Value="18"/>
 
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="RadioButton">
-                        <Grid x:Name="gridMain" Background="{TemplateBinding Background}">
+                        <Grid x:Name="gridMain" Background="#EAB14D">
                             <TextBlock Text="{TemplateBinding Content}" 
                                    Padding="{TemplateBinding Padding}"
                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
@@ -39,22 +38,6 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
-                <EventTrigger RoutedEvent="MouseEnter">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation To="{StaticResource ColorPrimary2}" Duration="0:0:0.1" Storyboard.TargetProperty="Background.Color"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-                <EventTrigger RoutedEvent="MouseLeave">
-                    <BeginStoryboard>
-                        <Storyboard>
-                            <ColorAnimation To="{StaticResource ColorPrimary1}" Duration="0:0:0.1" Storyboard.TargetProperty="Background.Color"/>
-                        </Storyboard>
-                    </BeginStoryboard>
-                </EventTrigger>
-            </Style.Triggers>
         </Style>
     </UserControl.Resources>
     <Grid>
@@ -91,8 +74,10 @@
                 <RadioButton Grid.Column="0"
                     Command="{Binding UpdateCurrentViewModelCommand}"
                     CommandParameter="{x:Static nav:ViewType.Home}"
-                    Content="Home"
+                    Content="Список"
                     IsChecked="{Binding CurrentViewModel, Mode=OneWay, Converter={StaticResource EqualValueToParameterConverter}, ConverterParameter={x:Type vm:HomeViewModel}}" />
+
+
             </Grid>
         </Grid>
     </Grid>
