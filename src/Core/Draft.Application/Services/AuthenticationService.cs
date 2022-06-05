@@ -1,4 +1,5 @@
 ﻿using Draft.Application.Common.Interfaces.Services;
+using Draft.Application.Exceptions;
 using Draft.Domain.Entites;
 using Draft.Domain.Enums;
 using Microsoft.AspNet.Identity;
@@ -24,7 +25,21 @@ namespace Draft.Application.Services
 
         public async Task<Account> Login(string username, string password)
         {
-            throw new NotImplementedException();
+            Account storedAccount = await _accountService.GetByUsername(username);
+
+            if (storedAccount == null)
+            {
+                throw new UserNotFoundException(username);
+            }
+
+            PasswordVerificationResult passwordResult = _passwordHasher.VerifyHashedPassword(storedAccount.AccountHolder.PasswordHash, password);
+
+            if (passwordResult != PasswordVerificationResult.Success)
+            {
+                throw new InvalidPasswordException(username, password);
+            }
+
+            return storedAccount;
         }
 
         public async Task<RegistrationResult> Register(string email, string username, string password, string confirmPassword)
