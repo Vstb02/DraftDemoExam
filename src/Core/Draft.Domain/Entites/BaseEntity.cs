@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Draft.Domain.Entites
 {
-    public class TypeSupplier : BaseEntity
+    public class BaseEntity
     {
-        public string Name { get; set; }
-        public List<Supplier> Suppliers { get; set; }
+        public int Id { get; set; }
     }
 }
