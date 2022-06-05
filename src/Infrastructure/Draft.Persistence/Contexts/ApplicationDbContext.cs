@@ -18,6 +18,8 @@ namespace Draft.Persistence.Contexts
         public DbSet<TypeMaterial> TypeMaterials { get; set; } = null!;
         public DbSet<TypeSupplier> TypeSupplier { get; set; } = null!;
         public DbSet<Unit> Units { get; set; } = null!;
+        public DbSet<Account> Accounts { get; set; } = null!;
+
 
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 

@@ -16,6 +16,7 @@ namespace Draft.Application.Common.Interfaces
         DbSet<TypeMaterial> TypeMaterials { get; set; }
         DbSet<TypeSupplier> TypeSupplier { get; set; }
         DbSet<Unit> Units { get; set; }
+        DbSet<Account> Accounts { get; set; }
 
         Task<int> SaveChangesAsync();
     }
